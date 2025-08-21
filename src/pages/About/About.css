@@ -1,0 +1,151 @@
+#about_me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.3rem;
+  padding: 120px 10% 10%;
+  width: 100%;
+  min-height: 100vh;
+  background: #f6f6f6;
+}
+
+/* --- CONTAINER TOP CON 2 COLUMNAS --- */
+.container_top {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* DOS COLUMNAS IGUALES */
+  gap: 30px; /* ESPACIO ENTRE COLUMNAS */
+  width: 100%;
+  max-width: 1200px;
+  align-items: start;
+}
+
+.title_about {
+  font-size: 28px;
+  color: #1A2525;
+  padding-top: 10px;
+  margin: 2rem 0;
+  font-weight: var(--font-extrabold);
+  text-align: left;
+  grid-column: 1 / -1; /* EL TÍTULO OCUPA AMBAS COLUMNAS */
+}
+.text_about_one span{
+  font-weight: var(--font-semibold);
+}
+
+.text_about_one .text_about_two {
+  font-size: 19px;
+  color: #000000;
+  line-height: 1.6;
+  text-align: left;
+  font-weight: var(--font-regular);
+  /* Columna izquierda automáticamente */
+}
+
+.container_middle {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 20px; /* Espacio entre columnas */
+  align-items: start;
+  
+}
+
+.title_do {
+  font-size: 28px;
+  color: #1A2525;
+  font-weight: var(--font-bold);
+  grid-column: 1 / -1; /* Título ocupa ambas columnas */
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.text_do_1,
+.text_do_2,
+.text_do_3,
+.text_do_4 {
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.6;
+  font-weight: var(--font-regular);
+  text-align: left;
+}
+
+.text_do_1 span,
+.text_do_2 span,
+.text_do_3 span,
+.text_do_4 span {
+  font-weight: var(--font-semibold); /* Resaltar los títulos dentro de cada párrafo */
+  margin-right: 10px;
+}
+
+/* About.css - Agregar al final del archivo */
+
+/* --- CONTAINER BOTTOM - MY STACKS --- */
+
+.container_bottom {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+.title_stacks {
+  font-size: 28px;
+  color: #1A2525;
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.skills-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  
+}
+
+.skills-section h4 {
+  font-size: 20px;
+  color: #1A2525;
+  font-weight: var(--font-semibold);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+.backend-list {
+  margin-bottom: 4.7rem;
+}
+
+
+.skills-list li {
+  border: 1px solid #000;
+  background-color: #f6f6f6;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: var(--font-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .skills-list {
+    gap: 10px;
+  }
+  
+  .skills-list li {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+}

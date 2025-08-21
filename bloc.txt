@@ -1,0 +1,32 @@
+PORTFOLIO/
+node_modules/
+public/images/...
+src/
+   
+   --components/NavBar/
+                      --NavBar.jsx
+                      --NavBar.css
+   --pages/
+          --About/
+                 --About.jsx
+                 --About.css
+          --Contact/
+                     --Contact.jsx
+                     --Contact.css
+          --Home/
+                --Home.jsx
+                --Home.css
+          --Projects/
+                    --Projects.jsx
+                    --Projects.css
+   --App.jsx
+   --App.css
+   --index.css
+   --main.jsx   
+.gitignore
+eslint.config.js
+index.html
+package-lock.json
+package.json
+README.md
+vite.config.js
