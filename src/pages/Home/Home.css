@@ -1,18 +1,19 @@
 #container_home {
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
   gap: 4.3rem;
-  padding: 120px 10% 10%; /* MODIFICADO: agregar padding lateral */
+  /*padding: 120px 10% 10%; /* MODIFICADO: agregar padding lateral */
   width: 100%;
   min-height: 100vh; /* CAMBIADO: de height a min-height */
   background: #f6f6f6;
 }
 
 .container_left {
+  
   display: flex;
   flex-direction: column;
-  justify-content: center; /* CAMBIADO: de space-around a center */
+  justify-content: space-between; /* CAMBIADO: de space-around a center */
   gap: 30px; /* REDUCIDO: de 55px a 30px */
   flex: 0 1 50%; /* AJUSTADO: de 0 3 50% a 0 1 50% */
 }
@@ -47,7 +48,7 @@
 }
 
 .description_picture {
-  max-width: 80%; /* AUMENTADO: de 50% a 80% */
+  max-width: 100%; /* AUMENTADO: de 50% a 80% */
   height: auto;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* MEJORADO: sombra más suave */

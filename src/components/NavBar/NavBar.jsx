@@ -4,8 +4,9 @@ import logo from "/images/Logo.webp";
 import "./NavBar.css";
 
 function NavBar() {
+  
   return (
-    <nav className="navbar">
+    <nav className="navbar p-lateral">
       <Link to="container_home" smooth={true} duration={500}>
         <img src={logo} alt="Logo" className="navbar-logo" />
       </Link>
