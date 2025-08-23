@@ -5,15 +5,33 @@ import Button from 'react-bootstrap/Button';
 import './Contact.css';
 
 function Contact() {
-  // Reemplaza eCstas URLs con tus enlaces reales
-  const CV_TOMAS_CASCONE = "/public/images/CV_TOMAS_CASCONE.pdf";
+  // Reemplaza estas URLs con tus enlaces reales
   const emailAddress = "tomascascone@gmail.com";
   const linkedinUrl = "https://linkedin.com/in/tu-usuario";
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/CV_TOMAS_CASCONE.pdf';
+    link.download = 'CV_Tomas_Cascone.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${emailAddress}?subject=Contacto desde Portfolio&body=Hola Tomás, te contacto porque...`;
+  };
 
   return (
     <section id="contact_me" className="py-5">
       <div className="container">
-        <h2 className="text-start mb-5">Contact Me {}</h2>
+        <div className="text-center mb-5">
+          <img 
+            src="/images/work_togheter.webp" 
+            alt="Ilustración de contacto" 
+            className="img-fluid contact-main-image w-25"
+          />
+        </div>
         
         <div className="row justify-content-center">
           
@@ -27,15 +45,12 @@ function Contact() {
                   Download my complete CV in PDF format
                 </Card.Text>
                 <Button 
-// Esta es la forma MÁS SEGURA
-
-  href={`${window.location.origin}/public/images/CV_TOMAS_CASCONE.pdf`}
-  download="CV_Tomas_Cascone.pdf"
-  className="btn btn-primary mt-auto"
->
-  📄 Descargar mi CV
-
-</Button>
+                  variant="primary" 
+                  onClick={handleDownloadCV}
+                  className="mt-auto"
+                >
+                  📄 Descargar mi CV
+                </Button>
               </Card.Body>
             </Card>
           </div>
@@ -47,7 +62,14 @@ function Contact() {
                 <FaEnvelope size={50} className="mb-3 text-primary mx-auto" />
                 <Card.Title>Email</Card.Title>
                 <Card.Text className="text-muted">{emailAddress}</Card.Text>
-                
+                <Button 
+                  variant="outline-primary" 
+                  className="mt-auto"
+                  onClick={handleEmailClick}
+                >
+                  <FaEnvelope className="me-2" />
+                  Enviar Email
+                </Button>
               </Card.Body>
             </Card>
           </div>
@@ -66,6 +88,7 @@ function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <FaLinkedin className="me-2" />
                   View Profile
                 </Button>
               </Card.Body>
