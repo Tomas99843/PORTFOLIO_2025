@@ -7,7 +7,7 @@ import './Contact.css';
 function Contact() {
   // Reemplaza estas URLs con tus enlaces reales
   const emailAddress = "tomascascone@gmail.com";
-  const linkedinUrl = "https://linkedin.com/in/tu-usuario";
+  const linkedinUrl = "https://linkedin.com/in/tu-usuario"; 
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
@@ -40,16 +40,16 @@ function Contact() {
             <Card className="h-100 text-center border-0 shadow-sm">
               <Card.Body className="d-flex flex-column">
                 <FaFilePdf size={50} className="mb-3 text-danger mx-auto" />
-                <Card.Title>Curriculum Vitae</Card.Title>
+                  <Card.Title>Curriculum Vitae</Card.Title> {/*MODIFICAR*/}
                 <Card.Text className="text-muted">
-                  Download my complete CV in PDF format
+                  Download my complete CV in PDF format  {/*MODIFICAR*/}
                 </Card.Text>
                 <Button 
-                  variant="primary" 
+                  variant="outline-primary" 
                   onClick={handleDownloadCV}
                   className="mt-auto"
                 >
-                  📄 Descargar mi CV
+                  📄 Descargar mi CV 
                 </Button>
               </Card.Body>
             </Card>
@@ -60,7 +60,7 @@ function Contact() {
             <Card className="h-100 text-center border-0 shadow-sm">
               <Card.Body className="d-flex flex-column">
                 <FaEnvelope size={50} className="mb-3 text-primary mx-auto" />
-                <Card.Title>Email</Card.Title>
+                <Card.Title>Email</Card.Title>  {/*MODIFICAR*/}
                 <Card.Text className="text-muted">{emailAddress}</Card.Text>
                 <Button 
                   variant="outline-primary" 
@@ -68,7 +68,7 @@ function Contact() {
                   onClick={handleEmailClick}
                 >
                   <FaEnvelope className="me-2" />
-                  Enviar Email
+                  Enviar Email {/*MODIFICAR*/}
                 </Button>
               </Card.Body>
             </Card>
@@ -79,17 +79,17 @@ function Contact() {
             <Card className="h-100 text-center border-0 shadow-sm">
               <Card.Body className="d-flex flex-column">
                 <FaLinkedin size={50} className="mb-3 text-info mx-auto" />
-                <Card.Title>LinkedIn</Card.Title>
-                <Card.Text className="text-muted">Let's connect professionally</Card.Text>
+                <Card.Title>LinkedIn</Card.Title> {/*MODIFICAR*/}
+                <Card.Text className="text-muted">Let's connect professionally</Card.Text> {/*MODIFICAR*/}
                 <Button 
-                  variant="outline-info" 
+                  variant="outline-primary" 
                   className="mt-auto"
                   href={linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaLinkedin className="me-2" />
-                  View Profile
+                  View Profile {/*MODIFICAR*/}
                 </Button>
               </Card.Body>
             </Card>

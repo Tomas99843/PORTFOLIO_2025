@@ -22,7 +22,7 @@
 .title_about {
   font-size: 28px;
   color: var(--color-primary);
-  padding-top: 10px;
+  padding-top: 20px;
   margin: 0;
   font-weight: var(--font-extrabold);
   text-align: left;
@@ -34,8 +34,8 @@
 }
 
 .text_about_one .text_about_two {
-  font-size: 19px;
-  color: var(--color-secondary);
+  font-size: 22px;
+  color: var(--color-primary);
   line-height: 1.6;
   text-align: left;
   font-weight: var(--font-regular);
@@ -52,19 +52,19 @@
 }
 
 .title_do {
-  font-size: 28px;
+  font-size: 24px;
   color: var(--color-primary);
   font-weight: var(--font-bold);
   grid-column: 1 / -1;
   text-align: left;
 }
 
-.text_do_1,
-.text_do_2,
-.text_do_3,
-.text_do_4 {
-  font-size: 16px;
-  color: var(--color-secondary);
+.text_do_1 p,
+.text_do_2 p,
+.text_do_3 p,
+.text_do_4 p {
+  font-size: 22px;
+  color: var(--color-primary);
   line-height: 1.6;
   font-weight: var(--font-regular);
   text-align: left;
@@ -86,7 +86,7 @@
 }
 
 .title_stacks {
-  font-size: 28px;
+  font-size: 24px;
   color: var(--color-primary);
   font-weight: var(--font-bold);
   margin-bottom: var(--space-sm);
@@ -95,11 +95,12 @@
 
 .skills-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem; /* espacio entre columnas */
 }
 
 .skills-section h4 {
-  font-size: 20px;
+  font-size: 22px;
   color: var(--color-primary);
   font-weight: var(--font-semibold);
   margin-bottom: var(--space-sm);
@@ -111,22 +112,60 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: var(--space-md);
-}
-
-.backend-list {
-  margin-bottom: 4.7rem;
+  gap: 10px;
+  padding-left:0;
+  margin-bottom: var(--space-sm);
 }
 
 .skills-list li {
   border: 1px solid var(--color-secondary);
   background-color: var(--color-bg);
   padding: 8px 16px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: var(--font-light);
 }
+/* --- CERTIFICATIONS --- */
+.p_container{
+  padding:0;
+  margin:0;
+}
+.container_certifications {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: var(--space-lg);
+}
 
+.container_certifications h2  {
+  font-size: 24px;
+  color: var(--color-primary);
+  font-weight: var(--font-bold);
+  text-align: left;
+  margin-bottom: var(--space-md);
+}
+
+/* Card personalizada */
+.custom-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-secondary);
+  border-radius: 8px;
+  box-shadow: none; /* eliminamos sombra de Bootstrap */
+  width: 100%;
+  height: 100%;
+  padding: 8px 16px;
+}
+
+.custom-card-img {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.custom-card-title {
+  font-size: 18px;
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+  margin-top: var(--space-xs);
+}
 /* Responsive */
 @media (max-width: 768px) {
   .container_top,
