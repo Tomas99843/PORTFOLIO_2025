@@ -1,53 +1,61 @@
-.p-lateral{
-  padding:0px 200px;
+.p-lateral {
+  padding: 0 var(--space-lg);
 }
 
+
 .navbar {
-  padding-top:20px;
-  padding-bottom:20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%; 
-  background: #f6f6f6; 
-  position: fixed; 
+  width: 100%;
+  background: var(--color-bg);
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: transform 0.3s ease;
 }
 
 .navbar-logo {
-    width: 120px;
-    height: auto;
-    cursor: pointer;
+  width: 120px;
+  height: auto;
+  cursor: pointer;
 }
 
 .navLinks {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .navbar-link {
-    font-family: var(--font-primary);
-    font-weight: var(--font-medium);
-    font-size: 18px;
-    cursor: pointer;
-    text-decoration: none;
-    color: #1A2525;
-    transition: color 0.2s;
+  font-weight: var(--font-medium);
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: color 0.2s;
 }
 
 .navbar-link:hover {
-  color: #007bff; /* Color al pasar el mouse */
+  color: var(--color-accent);
 }
 
-/* Cuando se oculta la navbar */
+/* Ocultar navbar en scroll */
 .navbar.hide {
   transform: translateY(-100%);
-  transition: transform 0.3s ease;
 }
-/* Cuando se oculta la navbar */
-.navbar.hide {
-  transform: translateY(-100%);
-  transition: transform 0.3s ease;
+
+/* Responsive */
+@media (max-width: 768px) {
+  .p-lateral {
+    padding: 0 var(--space-sm);
+  }
+
+  .navLinks {
+    gap: 15px;
+  }
+
+  .navbar-link {
+    font-size: 16px;
+  }
 }

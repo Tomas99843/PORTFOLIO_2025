@@ -1,20 +1,19 @@
-
 #about_me {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 0px;
+  padding: 50px 0;
   width: 100%;
   min-height: 100vh;
-  background: #f6f6f6;
+  background: var(--color-bg);
 }
 
-/* --- CONTAINER TOP CON 2 COLUMNAS --- */
+/* --- TOP --- */
 .container_top {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* DOS COLUMNAS IGUALES */
-  gap: 30px; /* ESPACIO ENTRE COLUMNAS */
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
   width: 100%;
   max-width: 1200px;
   align-items: start;
@@ -22,42 +21,41 @@
 
 .title_about {
   font-size: 28px;
-  color: #1A2525;
+  color: var(--color-primary);
   padding-top: 10px;
-  margin: 2rem 0;
+  margin: 0;
   font-weight: var(--font-extrabold);
   text-align: left;
-  grid-column: 1 / -1; /* EL TÍTULO OCUPA AMBAS COLUMNAS */
+  grid-column: 1 / -1;
 }
-.text_about_one span{
+
+.text_about_one span {
   font-weight: var(--font-semibold);
 }
 
 .text_about_one .text_about_two {
   font-size: 19px;
-  color: #000000;
+  color: var(--color-secondary);
   line-height: 1.6;
   text-align: left;
   font-weight: var(--font-regular);
-  /* Columna izquierda automáticamente */
 }
 
+/* --- MIDDLE --- */
 .container_middle {
   width: 100%;
   max-width: 1200px;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  gap: 20px; /* Espacio entre columnas */
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   align-items: start;
-  
 }
 
 .title_do {
   font-size: 28px;
-  color: #1A2525;
+  color: var(--color-primary);
   font-weight: var(--font-bold);
-  grid-column: 1 / -1; /* Título ocupa ambas columnas */
-  margin-bottom: 1rem;
+  grid-column: 1 / -1;
   text-align: left;
 }
 
@@ -66,7 +64,7 @@
 .text_do_3,
 .text_do_4 {
   font-size: 16px;
-  color: #000000;
+  color: var(--color-secondary);
   line-height: 1.6;
   font-weight: var(--font-regular);
   text-align: left;
@@ -76,41 +74,37 @@
 .text_do_2 span,
 .text_do_3 span,
 .text_do_4 span {
-  font-weight: var(--font-semibold); /* Resaltar los títulos dentro de cada párrafo */
+  font-weight: var(--font-semibold);
   margin-right: 10px;
 }
 
-/* About.css - Agregar al final del archivo */
-
-/* --- CONTAINER BOTTOM - MY STACKS --- */
-
+/* --- BOTTOM --- */
 .container_bottom {
   width: 100%;
   max-width: 1200px;
-  margin-top: 2rem;
+  margin-top: var(--space-md);
 }
 
 .title_stacks {
   font-size: 28px;
-  color: #1A2525;
+  color: var(--color-primary);
   font-weight: var(--font-bold);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
   text-align: left;
 }
 
 .skills-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  
 }
 
 .skills-section h4 {
   font-size: 20px;
-  color: #1A2525;
+  color: var(--color-primary);
   font-weight: var(--font-semibold);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: var(--space-xs);
 }
 
 .skills-list {
@@ -118,16 +112,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-md);
 }
+
 .backend-list {
   margin-bottom: 4.7rem;
 }
 
-
 .skills-list li {
-  border: 1px solid #000;
-  background-color: #f6f6f6;
+  border: 1px solid var(--color-secondary);
+  background-color: var(--color-bg);
   padding: 8px 16px;
   font-size: 15px;
   font-weight: var(--font-light);
@@ -135,15 +129,17 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .container_top,
+  .container_middle {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
   .skills-section {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: var(--space-md);
   }
-  
-  .skills-list {
-    gap: 10px;
-  }
-  
+
   .skills-list li {
     font-size: 14px;
     padding: 6px 14px;

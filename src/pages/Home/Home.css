@@ -1,55 +1,77 @@
 #container_home {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   gap: 4.3rem;
-  /*padding: 120px 10% 10%; /* MODIFICADO: agregar padding lateral */
   width: 100%;
-  min-height: 100vh; /* CAMBIADO: de height a min-height */
-  background: #f6f6f6;
+  min-height: 100vh;
+  background: var(--color-bg);
+  padding: 50px 0;
+  
 }
 
 .container_left {
-  
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* CAMBIADO: de space-around a center */
-  gap: 30px; /* REDUCIDO: de 55px a 30px */
-  flex: 0 1 50%; /* AJUSTADO: de 0 3 50% a 0 1 50% */
+  justify-content: center;
+  gap: var(--space-md);
+  flex: 0 1 50%;
 }
 
 .container_right {
   display: flex;
   flex: 0 1 30%;
-  justify-content: center; /* AGREGADO: centrar la imagen */
-  align-items: center; /* AGREGADO */
+  justify-content: center;
+  align-items: center;
 }
 
 .description_name {
   font-size: 28px;
-  color: #1A2525;
-  margin-bottom: 0.5rem; /* REDUCIDO: de 1rem a 0.5rem */
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
   font-weight: var(--font-medium);
 }
 
 .description_job {
   font-size: 60px;
   font-weight: var(--font-black);
-  color: #1A2525;
-  margin-bottom: 0.5rem; /* REDUCIDO: de 1rem a 0.5rem */
-  line-height: 1.1; /* AGREGADO: para mejor espaciado */
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+  line-height: 1.1;
 }
 
 .description_location {
-  font-size: 19px;
-  color: #000000;
+  font-size: 20px;
+  color: var(--color-secondary);
   font-weight: var(--font-light);
-  margin-top: 10px; /* AGREGADO: separación adicional */
+  margin-top: 10px;
 }
 
 .description_picture {
-  max-width: 100%; /* AUMENTADO: de 50% a 80% */
+  max-width: 100%;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* MEJORADO: sombra más suave */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #container_home {
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-sm);
+    text-align: center;
+  }
+
+  .description_job {
+    font-size: 40px;
+  }
+
+  .description_name {
+    font-size: 22px;
+  }
+
+  .description_location {
+    font-size: 16px;
+  }
 }
